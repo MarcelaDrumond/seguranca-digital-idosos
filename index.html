@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    try {
+      if (localStorage.getItem('acessibilidade-ativa') === 'true') {
+        document.documentElement.classList.add('modo-acessivel');
+      }
+    } catch (e) {}
+  </script>
+  <title>Segurança Digital para Você | CEU Anhanguera</title>
+  <meta name="description" content="Aprenda em poucos minutos a identificar golpes de Pix, WhatsApp clonado e links falsos. Guia simples e gratuito.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
+  <button id="toggle-acessibilidade" type="button" class="tap-target a11y-toggle" aria-pressed="false" aria-label="Aumentar texto e contraste">
+    Aa
+  </button>
+  <main id="conteudo-principal">
+    <section id="hero" class="max-w-2xl mx-auto px-6 pt-16 pb-12 text-center">
+      <div id="hero-imagem" class="mb-10 flex justify-center">
+        <img src="assets/hero.jpg" alt="Mulher sorridente usando o celular com tranquilidade" width="800" height="533" class="w-full max-w-sm rounded-2xl">
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+        Proteja-se dos golpes digitais em 3 minutos
+      </h1>
+      <p class="text-xl">
+        Um guia rápido e simples para você reconhecer as armadilhas mais comuns no Pix, no
+        WhatsApp e em links — e ficar tranquilo no celular.
+      </p>
+    </section>
+    <section id="golpes" class="max-w-2xl mx-auto px-6 py-14">
+      <div class="mb-10 text-center">
+        <h2 class="text-3xl font-bold mb-4">3 Golpes Mais Comuns</h2>
+        <button id="btn-imprimir" type="button" class="tap-target btn-secundario rounded-xl px-5 py-3 text-lg font-bold">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="7" width="12" height="6" rx="1"/>
+            <path d="M6 7 V3 h8 v4"/>
+            <path d="M6 13 v4 h8 v-4"/>
+          </svg>
+          <span>Baixar Guia em PDF</span>
+        </button>
+      </div>
+      <div class="flex flex-col gap-8">
+
+        <article class="rounded-2xl p-6 shadow-sm">
+          <div class="golpe-alerta-badge" aria-hidden="true">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#B04A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+              <path d="M10 3 L18 17 H2 Z"/>
+              <line x1="10" y1="8.5" x2="10" y2="12"/>
+              <circle cx="10" cy="14.3" r="0.9" fill="#B04A2A" stroke="none"/>
+            </svg>
+          </div>
+          <div class="flex justify-center mb-4">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-12 h-12" stroke="#2C5F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="7" y="15" width="18" height="14" rx="2.5"/>
+              <path d="M10.5 15 v-4.5 a5.5 5.5 0 0 1 11 0 v4.5"/>
+              <circle cx="16" cy="20.5" r="1.4" fill="#2C5F5A" stroke="none"/>
+              <line x1="16" y1="22.3" x2="16" y2="24.5"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-2">Golpe do Pix</h3>
+          <p class="text-lg">Você recebe uma mensagem dizendo que seu Pix foi bloqueado, com
+            um link para "desbloquear". É mentira — é um golpe para roubar a senha do seu
+            banco. <strong>Regra de ouro:</strong> o banco nunca manda links por SMS ou
+            WhatsApp. Na dúvida, apague a mensagem.</p>
+        </article>
+
+        <article class="rounded-2xl p-6 shadow-sm">
+          <div class="flex justify-center mb-4">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-12 h-12" stroke="#2C5F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 11 v-3.5 a2.5 2.5 0 0 1 2.5-2.5 h9 a2.5 2.5 0 0 1 2.5 2.5 v9 a2.5 2.5 0 0 1-2.5 2.5 H21"/>
+              <rect x="6" y="11" width="14" height="15" rx="2.5"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-2">WhatsApp Clonado / Falso Número</h3>
+          <p class="text-lg">Um "parente" te chama de um número novo pedindo dinheiro
+            urgente. Cuidado: os golpistas usam Inteligência Artificial para imitar até a
+            voz da pessoa em áudios! <strong>Regra de ouro:</strong> nunca faça o Pix. Ligue
+            para o número antigo (o que você já tinha salvo na sua agenda) ou faça uma
+            chamada de vídeo para ter certeza.</p>
+        </article>
+
+        <article class="rounded-2xl p-6 shadow-sm">
+          <div class="flex justify-center mb-4">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-12 h-12" stroke="#2C5F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="7" width="24" height="18" rx="2.5"/>
+              <path d="M4 8 L16 18 L28 8"/>
+              <line x1="16" y1="21" x2="16" y2="23.5"/>
+              <circle cx="16" cy="26" r="1.4" fill="#2C5F5A" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl mb-2">Link Falso</h3>
+          <p class="text-lg">Você "ganhou" um prêmio inesperado e recebeu um link para
+            resgatar. Se você não se inscreveu em nada, não existe prêmio — é um golpe para
+            roubar seus dados. <strong>Regra de ouro:</strong> desconfie de urgências e
+            prêmios fáceis. Nunca preencha seus dados em links desconhecidos.</p>
+        </article>
+
+      </div>
+    </section>
+    <section id="quiz" class="max-w-xl mx-auto px-6 py-16">
+      <noscript>
+        <p class="text-lg font-semibold mb-8" style="color: #B04A2A;">
+          Para fazer o quiz, ative o JavaScript no seu navegador.
+        </p>
+      </noscript>
+      <h2 class="text-3xl font-bold mb-2 text-center">Teste o que você aprendeu</h2>
+      <p class="mb-8 text-lg text-center">Responda 3 perguntas rápidas. O importante é
+        aprender, não acertar tudo.</p>
+
+      <div id="quiz-progresso" class="mb-4 text-lg font-semibold" style="color: #2C5F5A;" aria-live="polite"></div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="flex justify-between items-start gap-3 mb-6">
+          <p id="quiz-enunciado" class="text-xl font-semibold" style="margin: 0;" tabindex="-1"></p>
+          <button id="quiz-ouvir-pergunta" type="button" class="tap-target btn-icone btn-ouvir" aria-label="Ouvir a pergunta">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 8 v4 h3 l4 3.5 V4.5 L6 8 Z"/>
+              <path d="M13.5 7 a4 4 0 0 1 0 6"/>
+              <path d="M15.8 5 a7.5 7.5 0 0 1 0 10"/>
+            </svg>
+          </button>
+        </div>
+        <div id="quiz-alternativas" class="flex flex-col gap-3" role="radiogroup" aria-labelledby="quiz-enunciado"></div>
+        <div id="quiz-feedback" class="mt-6 hidden rounded-xl p-4" aria-live="polite" tabindex="-1">
+          <div class="flex justify-between items-start gap-3">
+            <p id="quiz-feedback-texto" class="text-lg" style="margin: 0;"></p>
+            <button id="quiz-ouvir-feedback" type="button" class="tap-target btn-icone btn-ouvir" aria-label="Ouvir a explicação">
+              <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 8 v4 h3 l4 3.5 V4.5 L6 8 Z"/>
+                <path d="M13.5 7 a4 4 0 0 1 0 6"/>
+                <path d="M15.8 5 a7.5 7.5 0 0 1 0 10"/>
+              </svg>
+            </button>
+          </div>
+          <p id="quiz-feedback-dica" class="text-lg hidden" style="margin: 12px 0 0 0; font-style: italic;">
+            Toque em outra alternativa para tentar de novo.
+          </p>
+        </div>
+        <button id="quiz-botao-acao" type="button" disabled
+          class="tap-target mt-6 w-full rounded-xl px-6 py-4 text-lg font-bold text-white"
+          style="background-color: #2C5F5A;">
+          Confirmar Resposta
+        </button>
+      </div>
+    </section>
+    <section id="resultado" hidden class="max-w-xl mx-auto px-6 py-16 text-center">
+      <div class="bg-white rounded-2xl p-8 shadow-sm">
+        <h2 class="text-3xl font-bold mb-4" tabindex="-1">Resultado</h2>
+        <p id="resultado-mensagem" class="text-xl mb-8"></p>
+        <div class="flex flex-col gap-3">
+          <button id="quiz-refazer" type="button"
+            class="tap-target rounded-xl px-6 py-4 text-lg font-bold text-white">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 10a6 6 0 1 1-2-4.47"/>
+              <polyline points="16 3 16 7 12 7"/>
+            </svg>
+            <span>Refazer o Quiz</span>
+          </button>
+          <a id="whatsapp-compartilhar" href="#" target="_blank" rel="noopener"
+            class="tap-target btn-secundario rounded-xl px-6 py-4 text-lg font-bold">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 11 L17 3"/>
+              <path d="M12 3 h5 v5"/>
+              <path d="M15 11 v5 a2 2 0 0 1-2 2 H5 a2 2 0 0 1-2-2 V8 a2 2 0 0 1 2-2 h5"/>
+            </svg>
+            <span>Compartilhar com um familiar</span>
+          </a>
+          <button id="quiz-exportar" type="button"
+            class="tap-target btn-secundario rounded-xl px-6 py-4 text-lg font-bold">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="icon-inline" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 3 v10 M6 9 l4 4 4-4"/>
+              <path d="M3 15 v2 a1.5 1.5 0 0 0 1.5 1.5 h11 a1.5 1.5 0 0 0 1.5-1.5 v-2"/>
+            </svg>
+            <span>Exportar Resultados (CSV)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="feedback" hidden class="max-w-xl mx-auto px-6 pb-16 text-center">
+      <div class="bg-white rounded-2xl p-8 shadow-sm">
+        <h2 class="text-2xl font-bold mb-6">Isso te ajudou?</h2>
+        <div id="feedback-iframe-container"></div>
+      </div>
+    </section>
+
+  </main>
+    <footer class="max-w-xl mx-auto px-6 pb-14 text-center text-lg" style="color: #2B2B28;">
+      <div id="footer-logo" class="mb-3 flex justify-center">
+        <img src="assets/logo-projeto.png" alt="Logo do Projeto de Extensão ADS x CEU Anhanguera" width="256" height="256" class="h-32 w-auto">
+      </div>
+      <p>Projeto de Extensão ADS — CEU Anhanguera</p>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>
