@@ -254,6 +254,10 @@ function mostrarFeedbackSeConfigurado() {
     iframe.height = '520';
     iframe.loading = 'lazy';
     iframe.style.border = '0';
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    // Defesa em profundidade: só as permissões que o Google Forms
+    // realmente precisa pra carregar e enviar a resposta.
+    iframe.sandbox = 'allow-scripts allow-same-origin allow-popups allow-forms allow-popups-to-escape-sandbox';
     container.appendChild(iframe);
   }
   secao.hidden = false;
